@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Student index", type: :feature do
   before(:each) do
-    @student1 = Student.create(name: "Alex", age: 33, house: "Lynch")
+    @student1 = Student.create(name: "Alex", age: 33, house: "Lynch")    
   end
 
     it "Shows a list of student names, ages, and house " do

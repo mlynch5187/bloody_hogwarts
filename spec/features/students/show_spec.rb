@@ -13,7 +13,6 @@ RSpec.describe "Student show page", type: :feature do
       visit "/students/#{@student1.id}"
 
       expect(page).to have_content("Courses")
-      expect(page).to have_content(@student1.courses)
       expect(page).to have_content("History 101")
       expect(page).to have_content("Biology 101")
       expect(page).to_not have_content("Math 101")
@@ -21,7 +20,6 @@ RSpec.describe "Student show page", type: :feature do
       visit "/students/#{@student2.id}"
 
       expect(page).to have_content("Courses")
-      expect(page).to have_content(@student2.courses)
       expect(page).to_not have_content("History 101")
       expect(page).to_not have_content("Biology 101")
       expect(page).to have_content("Math 101")

@@ -6,25 +6,25 @@ RSpec.describe "Student index", type: :feature do
     @student2 = Student.create(name: "Mike", age: 72, house: "Lynch")
   end
 
-    it "Shows a list of student names, ages, and house " do
-      visit "/students"
+  it "Shows a list of student names, ages, and house " do
+    visit "/students"
 
-      within "#student-#{@student1.id}" do
-        expect(page).to have_content("Name")
-        expect(page).to have_content(@student1.name)
-        expect(page).to have_content("Age")
-        expect(page).to have_content(@student1.age)
-        expect(page).to have_content("House")
-        expect(page).to have_content(@student1.house)
+    within "#student-#{@student1.id}" do
+      expect(page).to have_content("Name")
+      expect(page).to have_content(@student1.name)
+      expect(page).to have_content("Age")
+      expect(page).to have_content(@student1.age)
+      expect(page).to have_content("House")
+      expect(page).to have_content(@student1.house)
     end
 
-      within "#student-#{@student2.id}" do
-        expect(page).to have_content("Name")
-        expect(page).to have_content(@student2.name)
-        expect(page).to have_content("Age")
-        expect(page).to have_content(@student2.age)
-        expect(page).to have_content("House")
-        expect(page).to have_content(@student2.house)
+    within "#student-#{@student2.id}" do
+      expect(page).to have_content("Name")
+      expect(page).to have_content(@student2.name)
+      expect(page).to have_content("Age")
+      expect(page).to have_content(@student2.age)
+      expect(page).to have_content("House")
+      expect(page).to have_content(@student2.house)
     end
   end
 end

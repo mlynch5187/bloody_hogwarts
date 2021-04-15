@@ -27,4 +27,11 @@ RSpec.describe "Student index", type: :feature do
       expect(page).to have_content(@student2.house)
     end
   end
+
+  it "Shows average age of all students" do
+    visit "/students"
+
+    expect(page).to have_content("Average Age")
+    expect(page).to have_content("52.5")
+  end
 end
